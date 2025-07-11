@@ -1,4 +1,4 @@
-# Mini Framework CSS
+# MyCSS
 
 Un framework CSS léger, responsive et facile à maintenir. Conçu pour être simple à utiliser et à étendre.
 
