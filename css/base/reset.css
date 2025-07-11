@@ -1,0 +1,79 @@
+/* Reset moderne et minimal */
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* Amélioration du rendu du texte */
+html {
+  -webkit-text-size-adjust: 100%;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+}
+
+body {
+  font-family: var(--font-family-base);
+  font-size: var(--font-size-base);
+  line-height: var(--line-height-base);
+  color: var(--gray-900);
+  background-color: var(--white);
+}
+
+/* Éléments de bloc */
+article, aside, figcaption, figure,
+footer, header, hgroup, main, nav, section {
+  display: block;
+}
+
+/* Images responsive par défaut */
+img {
+  max-width: 100%;
+  height: auto;
+  vertical-align: middle;
+  border-style: none;
+}
+
+/* Formulaires */
+button, input, optgroup, select, textarea {
+  font-family: inherit;
+  font-size: 100%;
+  line-height: 1.15;
+  margin: 0;
+}
+
+button, select {
+  text-transform: none;
+}
+
+button, [type="button"], [type="reset"], [type="submit"] {
+  -webkit-appearance: button;
+}
+
+/* Liens */
+a {
+  color: var(--primary);
+  text-decoration: none;
+  background-color: transparent;
+}
+
+a:hover {
+  color: darken(var(--primary), 15%);
+  text-decoration: underline;
+}
+
+/* Tables */
+table {
+  border-collapse: collapse;
+}
+
+/* Listes */
+ol, ul {
+  list-style: none;
+}
+
+/* Suppression des bordures sur les champs de formulaire focalisés */
+[tabindex="-1"]:focus:not(:focus-visible) {
+  outline: 0 !important;
+}

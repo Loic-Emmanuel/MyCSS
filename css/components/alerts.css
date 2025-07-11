@@ -1,0 +1,76 @@
+/* Styles de base pour les alertes */
+.alert {
+  position: relative;
+  padding: var(--spacing-3);
+  margin-bottom: var(--spacing-3);
+  border: 1px solid transparent;
+  border-radius: var(--border-radius);
+}
+
+/* Variantes d'alertes */
+.alert-success {
+  color: #155724;
+  background-color: #d4edda;
+  border-color: #c3e6cb;
+}
+
+.alert-warning {
+  color: #856404;
+  background-color: #fff3cd;
+  border-color: #ffeeba;
+}
+
+.alert-danger {
+  color: #721c24;
+  background-color: #f8d7da;
+  border-color: #f5c6cb;
+}
+
+.alert-info {
+  color: #0c5460;
+  background-color: #d1ecf1;
+  border-color: #bee5eb;
+}
+
+/* Bouton de fermeture */
+.alert-dismissible {
+  padding-right: 4rem;
+}
+
+.alert-dismissible .close {
+  position: absolute;
+  top: 0;
+  right: 0;
+  padding: var(--spacing-3);
+  color: inherit;
+  background: transparent;
+  border: 0;
+  cursor: pointer;
+  opacity: 0.5;
+}
+
+.alert-dismissible .close:hover {
+  opacity: 1;
+}
+
+/* Icônes d'alerte */
+.alert::before {
+  margin-right: var(--spacing-2);
+  font-weight: bold;
+}
+
+.alert-success::before {
+  content: "✓";
+}
+
+.alert-warning::before {
+  content: "⚠";
+}
+
+.alert-danger::before {
+  content: "✕";
+}
+
+.alert-info::before {
+  content: "ℹ";
+}

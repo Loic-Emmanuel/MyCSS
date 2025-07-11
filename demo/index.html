@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mini Framework CSS - Démonstration</title>
+    <link rel="stylesheet" href="../css/main.css">
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-fixed-top">
+        <a href="#" class="navbar-brand">Mini Framework</a>
+        <button class="navbar-toggle">☰</button>
+        <div class="navbar-collapse">
+            <ul class="navbar-nav">
+                <li><a href="#" class="nav-link active">Accueil</a></li>
+                <li><a href="#" class="nav-link">Composants</a></li>
+                <li><a href="#" class="nav-link">Documentation</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="container mt-5">
+        <h1 class="text-center mb-5">Démonstration des Composants</h1>
+
+        <!-- Boutons -->
+        <section class="mb-5">
+            <h2 class="mb-3">Boutons</h2>
+            <button class="btn btn-primary">Primaire</button>
+            <button class="btn btn-secondary">Secondaire</button>
+            <button class="btn btn-danger">Danger</button>
+            <button class="btn btn-primary" disabled>Désactivé</button>
+            <button class="btn btn-outline-primary">Outline</button>
+        </section>
+
+        <!-- Formulaires -->
+        <section class="mb-5">
+            <h2 class="mb-3">Formulaires</h2>
+            <form>
+                <div class="form-group">
+                    <label class="form-label">Email</label>
+                    <input type="email" class="form-control" placeholder="email@exemple.com">
+                </div>
+                <div class="form-group">
+                    <label class="form-label">Mot de passe</label>
+                    <input type="password" class="form-control is-invalid" placeholder="Mot de passe">
+                    <div class="invalid-feedback">Le mot de passe doit contenir au moins 8 caractères.</div>
+                </div>
+                <div class="form-group">
+                    <label class="form-label">Message</label>
+                    <textarea class="form-control" rows="3"></textarea>
+                </div>
+                <button type="submit" class="btn btn-primary">Envoyer</button>
+            </form>
+        </section>
+
+        <!-- Alertes -->
+        <section class="mb-5">
+            <h2 class="mb-3">Alertes</h2>
+            <div class="alert alert-success">Opération réussie !</div>
+            <div class="alert alert-warning">Attention : action requise.</div>
+            <div class="alert alert-danger">Erreur : impossible de continuer.</div>
+            <div class="alert alert-info">Information importante.</div>
+        </section>
+
+        <!-- Cards -->
+        <section class="mb-5">
+            <h2 class="mb-3">Cards</h2>
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="card">
+                        <img src="https://via.placeholder.com/300x200" class="card-img-top" alt="Image">
+                        <div class="card-body">
+                            <h5 class="card-title">Titre de la carte</h5>
+                            <p class="card-text">Un exemple de texte pour cette carte.</p>
+                            <button class="btn btn-primary">En savoir plus</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Badges -->
+        <section class="mb-5">
+            <h2 class="mb-3">Badges</h2>
+            <span class="badge badge-primary">Nouveau</span>
+            <span class="badge badge-secondary">En cours</span>
+            <span class="badge badge-success">Terminé</span>
+            <span class="badge badge-danger">Urgent</span>
+            <span class="badge badge-warning">En attente</span>
+            <span class="badge badge-pill badge-info">99+</span>
+        </section>
+
+        <!-- Tooltips -->
+        <section class="mb-5">
+            <h2 class="mb-3">Tooltips</h2>
+            <button class="btn btn-primary" data-tooltip="Ceci est une info-bulle" data-position="top">Hover me (Top)</button>
+            <button class="btn btn-secondary" data-tooltip="Position droite" data-position="right">Hover me (Right)</button>
+            <button class="btn btn-info" data-tooltip="Position gauche" data-position="left">Hover me (Left)</button>
+        </section>
+    </div>
+
+    <!-- Modal Demo -->
+    <div class="modal-overlay" id="demoModal">
+        <div class="modal">
+            <div class="modal-header">
+                <h5 class="modal-title">Titre de la Modal</h5>
+                <button class="modal-close">&times;</button>
+            </div>
+            <div class="modal-body">
+                <p>Contenu de la modal...</p>
+            </div>
+            <div class="modal-footer">
+                <button class="btn btn-secondary">Fermer</button>
+                <button class="btn btn-primary">Sauvegarder</button>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Toggle navbar sur mobile
+        document.querySelector('.navbar-toggle').addEventListener('click', function() {
+            document.querySelector('.navbar-collapse').classList.toggle('show');
+        });
+
+        // Gestion des modals
+        document.querySelectorAll('[data-modal]').forEach(trigger => {
+            trigger.addEventListener('click', function() {
+                const modal = document.getElementById(this.dataset.modal);
+                modal.classList.add('show');
+            });
+        });
+
+        document.querySelectorAll('.modal-close, .modal-overlay').forEach(closer => {
+            closer.addEventListener('click', function(e) {
+                if (e.target === this) {
+                    this.closest('.modal-overlay').classList.remove('show');
+                }
+            });
+        });
+    </script>
+</body>
+</html>

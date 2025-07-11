@@ -1,0 +1,96 @@
+/* Styles de base pour les cartes */
+.card {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+  word-wrap: break-word;
+  background-color: var(--white);
+  background-clip: border-box;
+  border: 1px solid var(--gray-300);
+  border-radius: var(--border-radius);
+  box-shadow: var(--shadow-sm);
+  transition: var(--transition-base);
+}
+
+.card:hover {
+  box-shadow: var(--shadow);
+}
+
+/* Image de carte */
+.card-img-top {
+  width: 100%;
+  border-top-left-radius: calc(var(--border-radius) - 1px);
+  border-top-right-radius: calc(var(--border-radius) - 1px);
+}
+
+/* Corps de la carte */
+.card-body {
+  flex: 1 1 auto;
+  padding: var(--spacing-3);
+}
+
+/* Titre de la carte */
+.card-title {
+  margin-bottom: var(--spacing-2);
+  font-size: var(--font-size-lg);
+  font-weight: 500;
+  color: var(--gray-900);
+}
+
+/* Sous-titre de la carte */
+.card-subtitle {
+  margin-top: calc(var(--spacing-2) * -1);
+  margin-bottom: var(--spacing-2);
+  color: var(--gray-600);
+}
+
+/* Texte de la carte */
+.card-text {
+  margin-bottom: var(--spacing-3);
+  color: var(--gray-700);
+}
+
+/* Pied de la carte */
+.card-footer {
+  padding: var(--spacing-3);
+  background-color: var(--gray-100);
+  border-top: 1px solid var(--gray-300);
+}
+
+/* Groupe de cartes */
+.card-group {
+  display: flex;
+  flex-flow: row wrap;
+  gap: var(--spacing-3);
+}
+
+/* Variantes de cartes */
+.card-primary {
+  border-top: 3px solid var(--primary);
+}
+
+.card-success {
+  border-top: 3px solid var(--success);
+}
+
+.card-warning {
+  border-top: 3px solid var(--warning);
+}
+
+.card-danger {
+  border-top: 3px solid var(--danger);
+}
+
+/* Card avec overlay */
+.card-img-overlay {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  padding: var(--spacing-3);
+  border-radius: var(--border-radius);
+  background: rgba(0, 0, 0, 0.5);
+  color: var(--white);
+}

@@ -1,0 +1,113 @@
+/* Navbar container */
+.navbar {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  padding: var(--spacing-2) var(--spacing-3);
+  background-color: var(--white);
+  border-bottom: 1px solid var(--gray-200);
+}
+
+/* Brand/logo */
+.navbar-brand {
+  display: inline-block;
+  padding-top: 0.3125rem;
+  padding-bottom: 0.3125rem;
+  margin-right: var(--spacing-3);
+  font-size: var(--font-size-lg);
+  font-weight: 600;
+  color: var(--gray-900);
+  text-decoration: none;
+}
+
+/* Toggle button for mobile */
+.navbar-toggle {
+  display: none;
+  padding: 0.25rem;
+  font-size: 1.25rem;
+  line-height: 1;
+  background-color: transparent;
+  border: 1px solid var(--gray-400);
+  border-radius: var(--border-radius);
+  cursor: pointer;
+}
+
+/* Navigation items container */
+.navbar-nav {
+  display: flex;
+  flex-direction: row;
+  padding-left: 0;
+  margin: 0;
+  list-style: none;
+  gap: var(--spacing-3);
+}
+
+/* Navigation links */
+.nav-link {
+  display: block;
+  padding: 0.5rem var(--spacing-2);
+  color: var(--gray-700);
+  text-decoration: none;
+  transition: var(--transition-base);
+}
+
+.nav-link:hover,
+.nav-link:focus {
+  color: var(--primary);
+}
+
+.nav-link.active {
+  color: var(--primary);
+  font-weight: 500;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+  .navbar-toggle {
+    display: block;
+  }
+
+  .navbar-collapse {
+    display: none;
+    width: 100%;
+    padding-top: var(--spacing-2);
+  }
+
+  .navbar-collapse.show {
+    display: block;
+  }
+
+  .navbar-nav {
+    flex-direction: column;
+    gap: var(--spacing-2);
+  }
+
+  .nav-link {
+    padding: var(--spacing-2);
+  }
+}
+
+/* Navbar avec fond coloré */
+.navbar-primary {
+  background-color: var(--primary);
+}
+
+.navbar-primary .navbar-brand,
+.navbar-primary .nav-link {
+  color: var(--white);
+}
+
+.navbar-primary .nav-link:hover,
+.navbar-primary .nav-link:focus {
+  color: var(--gray-200);
+}
+
+/* Navbar fixed top */
+.navbar-fixed-top {
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+  z-index: 1030;
+}

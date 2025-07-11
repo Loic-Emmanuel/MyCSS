@@ -1,0 +1,95 @@
+/* Styles de base pour les badges */
+.badge {
+  display: inline-block;
+  padding: 0.25em 0.6em;
+  font-size: 75%;
+  font-weight: 600;
+  line-height: 1;
+  text-align: center;
+  white-space: nowrap;
+  vertical-align: baseline;
+  border-radius: 0.25rem;
+  transition: var(--transition-base);
+}
+
+/* Variantes de badges */
+.badge-primary {
+  color: var(--white);
+  background-color: var(--primary);
+}
+
+.badge-secondary {
+  color: var(--white);
+  background-color: var(--secondary);
+}
+
+.badge-success {
+  color: var(--white);
+  background-color: var(--success);
+}
+
+.badge-danger {
+  color: var(--white);
+  background-color: var(--danger);
+}
+
+.badge-warning {
+  color: var(--dark);
+  background-color: var(--warning);
+}
+
+.badge-info {
+  color: var(--white);
+  background-color: var(--info);
+}
+
+/* Badges outline */
+.badge-outline-primary {
+  color: var(--primary);
+  border: 1px solid var(--primary);
+  background-color: transparent;
+}
+
+.badge-outline-secondary {
+  color: var(--secondary);
+  border: 1px solid var(--secondary);
+  background-color: transparent;
+}
+
+/* Badges arrondis */
+.badge-pill {
+  padding-right: 0.6em;
+  padding-left: 0.6em;
+  border-radius: 10rem;
+}
+
+/* Badge avec notification */
+.badge-notification {
+  position: relative;
+  top: -1px;
+  margin-left: 0.25rem;
+  font-size: 0.65em;
+}
+
+/* Badge avec icône */
+.badge-icon {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.25rem;
+}
+
+/* Animation au hover */
+.badge:hover {
+  filter: brightness(90%);
+}
+
+/* Badge en tant que compteur */
+.badge-counter {
+  position: absolute;
+  top: 0;
+  right: 0;
+  transform: translate(50%, -50%);
+  font-size: 0.65em;
+  min-width: 1em;
+  padding: 0.25em;
+}
